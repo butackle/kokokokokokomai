@@ -1,3 +1,35 @@
+/* ゲーム開始 */
+#gameInfo {
+    margin: 40px 0;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column; /* 🔸縦並びにする */
+    align-items: center; /* 🔸中央揃え */
+    gap: 20px; /* 🔸上下の間隔 */
+}
+
+#gameInfo a {
+    display: inline-block;
+    background-color: #f2a65a; /* 明るく目立つオレンジ */
+    color: #fff; /* 白字で視認性アップ */
+    text-decoration: none;
+    padding: 14px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#gameInfo a:hover {
+    background-color: #e88f35; /* ホバーで濃く */
+    transform: translateY(-2px); /* 少し浮くアニメーション */
+}
+
+#gameInfo a:active {
+    transform: translateY(0); /* 押したときに戻る */
+}
+
 /* 古米の定義 */
 #definitionOpenBtn {
     background-color: #fdf0da;
@@ -58,7 +90,7 @@ dialog#definitionDialog td {
 #definitionCloseBtn {
     padding: 10px 20px;
     background-color: #f2a65a; /* オレンジ系でアクセント */
-    color: #443b32;
+    color: white;
     border: none;
     border-radius: 8px;
     font-weight: bold;
