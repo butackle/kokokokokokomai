@@ -1,30 +1,20 @@
-body {
-    background-color: #fff1cf;
-    color: #443b32;
-    text-align: center;
-}
-
 /* 古米の定義 */
 #definitionOpenBtn {
     background-color: #fdf0da;
-    border: 2px solid #443b32; /* やさしい茶系の枠線 */
+    border: 1px solid #f8d5ac; /* やさしい茶系の枠線 */
     padding: 6px 12px;
     font-size: small;
     color: #443b32;
-    text-decoration: none;
+    text-decoration: underline;
     cursor: pointer;
-    font-weight: bold;
     border-radius: 6px;
     transition: all 0.3s ease;
 }
-
 #definitionOpenBtn:hover {
     background-color: #fce7c0; /* ほんのりハイライト */
     border-color: #8c7359; /* 少し濃くなる */
     color: #443b32;
 }
-
-
 dialog#definitionDialog {
     background-color: #fffaf0; /* クリーム背景と相性の良い、柔らかい白 */
     color: #443b32;
