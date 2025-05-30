@@ -5,27 +5,30 @@ body {
 }
 
 /* 古米の定義 */
-#definitionOpenBtn {
+/*
     padding: 6px 12px;
     font-size: small;
-    font-weight: bold;
-    color: #443b32; /* テキスト色：背景と統一感 */
-    background: linear-gradient(135deg, #f7c68b, #f2a65a); /* 柔らかいオレンジ〜ピーチ系 */
-    border: none;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(68, 59, 50, 0.2);
+ */
+#definitionOpenBtn {
+    background-color: #fdf0da;
+    border: 2px solid #443b32; /* やさしい茶系の枠線 */
+    padding: 6px 12px;
+    font-size: small;
+    color: #443b32;
+    text-decoration: none;
     cursor: pointer;
+    font-weight: bold;
+    border-radius: 6px;
     transition: all 0.3s ease;
 }
+
 #definitionOpenBtn:hover {
-    background: linear-gradient(135deg, #f2a65a, #ec8f3d); /* 少し濃い色に */
-    box-shadow: 0 6px 18px rgba(68, 59, 50, 0.25);
-    transform: translateY(-2px);
+    background-color: #fce7c0; /* ほんのりハイライト */
+    border-color: #8c7359; /* 少し濃くなる */
+    color: #443b32;
 }
-#definitionOpenBtn:active {
-    transform: scale(0.98);
-    box-shadow: 0 3px 8px rgba(68, 59, 50, 0.2);
-}
+
+
 dialog#definitionDialog {
     background-color: #fffaf0; /* クリーム背景と相性の良い、柔らかい白 */
     color: #443b32;
@@ -65,6 +68,7 @@ dialog#definitionDialog td {
     padding: 8px;
     border-bottom: 1px solid #e0d8c2; /* 優しいアクセントの線 */
 }
+
 #definitionCloseBtn {
     padding: 10px 20px;
     background-color: #f2a65a; /* オレンジ系でアクセント */
@@ -75,6 +79,7 @@ dialog#definitionDialog td {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+
 #definitionCloseBtn:hover {
     background-color: #ec8f3d;
 }
