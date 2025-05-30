@@ -6,8 +6,8 @@ body {
 
 /* 古米の定義 */
 #definitionOpenBtn {
-    padding: 12px 24px;
-    font-size: 16px;
+    padding: 6px 12px;
+    font-size: small;
     font-weight: bold;
     color: #443b32; /* テキスト色：背景と統一感 */
     background: linear-gradient(135deg, #f7c68b, #f2a65a); /* 柔らかいオレンジ〜ピーチ系 */
