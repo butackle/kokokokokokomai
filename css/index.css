@@ -65,7 +65,7 @@
 }
 
 /* 古米の定義 */
-#definitionOpenBtn {
+.modalBtn {
     background-color: #fdf0da;
     border: 1px solid #f8d5ac; /* やさしい茶系の枠線 */
     padding: 6px 12px;
@@ -76,12 +76,14 @@
     border-radius: 6px;
     transition: all 0.3s ease;
 }
-#definitionOpenBtn:hover {
+
+.modalBtn:hover {
     background-color: #fce7c0; /* ほんのりハイライト */
     border-color: #8c7359; /* 少し濃くなる */
     color: #443b32;
 }
-dialog#definitionDialog {
+
+dialog.modalDialog {
     background-color: #fffaf0; /* クリーム背景と相性の良い、柔らかい白 */
     color: #443b32;
     border: none;
@@ -95,33 +97,33 @@ dialog#definitionDialog {
     margin: auto;
 }
 
-dialog#definitionDialog::backdrop {
+dialog.modalDialog::backdrop {
     background-color: rgba(68, 59, 50, 0.4); /* 落ち着いたブラウンの透過背景 */
 }
 
-dialog#definitionDialog h2 {
+dialog.modalDialog h2 {
     font-size: 20px;
     margin-top: 0;
     margin-bottom: 16px;
     color: #443b32;
 }
 
-dialog#definitionDialog p {
+dialog.modalDialog p {
     margin-bottom: 20px;
 }
 
-dialog#definitionDialog table {
+dialog.modalDialog table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
 }
 
-dialog#definitionDialog td {
+dialog.modalDialog td {
     padding: 8px;
     border-bottom: 1px solid #e0d8c2; /* 優しいアクセントの線 */
 }
 
-#definitionCloseBtn {
+.modalCloseBtn {
     padding: 10px 20px;
     background-color: #f2a65a; /* オレンジ系でアクセント */
     color: white;
@@ -132,7 +134,7 @@ dialog#definitionDialog td {
     transition: background-color 0.3s ease;
 }
 
-#definitionCloseBtn:hover {
+.modalCloseBtn:hover {
     background-color: #ec8f3d;
 }
 
