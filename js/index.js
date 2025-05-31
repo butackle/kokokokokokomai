@@ -45,6 +45,7 @@ setDialogBtn('definitionDialog', 'definitionOpenBtn', 'definitionCloseBtn');
 西暦・和暦の対応について
  */
 setDialogBtn('warekiSeirekiDialog', 'warekiSeirekiOpenBtn', 'warekiSeirekiCloseBtn');
+const warekiSeirekiTable = document.querySelector('#warekiSeirekiDialog table tbody');
 document.addEventListener('DOMContentLoaded', () => {
 	WAREKI_SEIREKI.forEach(({wareki, seireki}) => {
 		const row = document.createElement('tr');
