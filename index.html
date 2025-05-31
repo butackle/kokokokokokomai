@@ -17,7 +17,7 @@
 <body>
     <h1>🌾古古古古古古米ゲーム🌾</h1>
     <p>古古古古言っている米が何年産の米なのか当てよう</p>
-
+    <!-- ゲーム開始 -->
     <div id="gameInfo">
         <div class="form-block">
             <label for="questions">問題を選択する</label>
@@ -37,7 +37,7 @@
             <a id="gameStartLink">ゲーム開始</a>
         </div>
     </div>
-
+    <!-- 古米の定義についてのモーダル -->
     <button class="modalBtn" id="definitionOpenBtn">古米の定義について</button>
     <dialog class="modalDialog" id="definitionDialog">
         <h2>古米の定義について</h2>
@@ -56,8 +56,30 @@
         </table>
         <button class="modalCloseBtn" id="definitionCloseBtn">閉じる</button>
     </dialog>
+    <br/>
+    <br/>
+    <!-- 西暦・和暦の対応についてのモーダル -->
+    <button class="modalBtn" id="warekiSeirekiOpenBtn">西暦・和暦の対応について</button>
+    <dialog class="modalDialog" id="warekiSeirekiDialog">
+        <h2>西暦・和暦の対応について</h2>
+        <p>下記の変換表に基づいて正解などを決定します。（2026年以降の対応は2025/5/31時点での推定です）</p>
+        <div class="modalTableScroll">
+            <table>
+                <thead>
+                <tr>
+                    <th>西暦</th>
+                    <th>和暦</th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        <button class="modalCloseBtn" id="warekiSeirekiCloseBtn">閉じる</button>
+    </dialog>
 
     <script src="./js/common.js"></script>
+    <script src="./js/wareki_seireki.js"></script>
     <script src="./js/index.js"></script>
 </body>
 </html>

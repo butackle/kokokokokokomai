@@ -46,6 +46,30 @@ definitionOpenBtn.addEventListener('click', () => defineDialog.showModal());
 definitionCloseBtn.addEventListener('click', () => defineDialog.close());
 
 /*
+西暦・和暦の対応について
+ */
+const warekiSeirekiDialog = document.getElementById('warekiSeirekiDialog');
+const warekiSeirekiOpenBtn = document.getElementById('warekiSeirekiOpenBtn');
+const warekiSeirekiCloseBtn = document.getElementById('warekiSeirekiCloseBtn');
+warekiSeirekiOpenBtn.addEventListener('click', () => warekiSeirekiDialog.showModal());
+warekiSeirekiCloseBtn.addEventListener('click', () => warekiSeirekiDialog.close());
+const warekiSeirekiTable = document.querySelector('#warekiSeirekiDialog table tbody');
+document.addEventListener('DOMContentLoaded', () => {
+	WAREKI_SEIREKI.forEach(({wareki, seireki}) => {
+		const row = document.createElement('tr');
+		const tdSeireki = document.createElement('td');
+		tdSeireki.textContent = seireki;
+		const tdWareki = document.createElement('td');
+		tdWareki.textContent = wareki;
+
+		row.appendChild(tdSeireki);
+		row.appendChild(tdWareki);
+		warekiSeirekiTable.appendChild(row);
+	})
+})
+
+
+/*
  前年・前々年を入れる処理
 */
 document.querySelectorAll('.p1Year').forEach((element) => {

@@ -1,4 +1,4 @@
-const warekiSeireki = [
+const WAREKI_SEIREKI = [
 	{
 		wareki: "明治1年",
 		seireki: 1868

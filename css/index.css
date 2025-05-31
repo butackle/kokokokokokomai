@@ -64,7 +64,7 @@
     margin-left: 25px;
 }
 
-/* 古米の定義 */
+/* モーダルの設定 */
 .modalBtn {
     background-color: #fdf0da;
     border: 1px solid #f8d5ac; /* やさしい茶系の枠線 */
@@ -118,7 +118,7 @@ dialog.modalDialog table {
     margin-bottom: 20px;
 }
 
-dialog.modalDialog td {
+dialog.modalDialog td, dialog.modalDialog th {
     padding: 8px;
     border-bottom: 1px solid #e0d8c2; /* 優しいアクセントの線 */
 }
@@ -138,3 +138,9 @@ dialog.modalDialog td {
     background-color: #ec8f3d;
 }
 
+.modalTableScroll {
+    max-height: 200px; /* 表示エリアの高さを制限 */
+    overflow-y: auto; /* 縦スクロールを有効に */
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
