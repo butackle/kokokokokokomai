@@ -14,7 +14,7 @@ const setGameLinkParams = (paramName, paramValue) => {
 }
 // ゲームページへのリンクに問題番号をセットする関数
 const setQuestion = () => {
-	const selectedValue = selectQuestion.value;
+	const selectedValue = selectQuestion.value || 0;
 	setGameLinkParams(QUESTION_PARAM, selectedValue);
 }
 // モード選択のラジオボタンが変更された時の処理
@@ -27,9 +27,19 @@ radioMode.forEach((radio) =>
 selectQuestion.addEventListener('change', setQuestion);
 // ページ読み込み時の処理
 window.addEventListener("pageshow", () => {
-	selectQuestion.value = 1;
+	// 問題集を取得してセレクトボックスに設定
+	getQuestions().then((questions) => {
+		selectQuestion.innerHTML = '';
+		questions.forEach((question, index) => {
+			const option = document.createElement('option');
+			option.value = index
+			option.textContent = `問題${index + 1}`;
+			selectQuestion.appendChild(option);
+		});
+	}).catch((error) => alert(`問題集の設定に失敗しました:${error}`));
 	setQuestion();
 
+	// デフォルトのゲームモードを設定
 	const seirekiRadioBtn = document.getElementById('seireki_radio');
 	seirekiRadioBtn.checked = true;
 	const warekiRadioBtn = document.getElementById('wareki_radio');
