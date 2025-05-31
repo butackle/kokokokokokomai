@@ -26,13 +26,14 @@ radioMode.forEach((radio) =>
 // 問題を選択した際の処理
 selectQuestion.addEventListener('change', setQuestion);
 // ページ読み込み時の処理
-document.addEventListener('DOMContentLoaded', () => {
+window.addEventListener("pageshow", () => {
+	selectQuestion.value = 1;
 	setQuestion();
-	// 和暦モードのラジオボタンの値を設定
+
+	const seirekiRadioBtn = document.getElementById('seireki_radio');
+	seirekiRadioBtn.checked = true;
 	const warekiRadioBtn = document.getElementById('wareki_radio');
-	if (warekiRadioBtn) {
-		warekiRadioBtn.value = WAREKI_MODE;
-	}
+	warekiRadioBtn.value = WAREKI_MODE;
 });
 
 
