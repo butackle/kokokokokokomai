@@ -69,6 +69,15 @@ document.addEventListener('DOMContentLoaded', () => {
 	})
 })
 
+/*
+寄付のお願い
+ */
+const donationDialog = document.getElementById('donationDialog');
+const donationOpenBtn = document.getElementById('donationOpenBtn');
+const donationCloseBtn = document.getElementById('donationCloseBtn');
+donationOpenBtn.addEventListener('click', () => donationDialog.showModal());
+donationCloseBtn.addEventListener('click', () => donationDialog.close());
+
 
 /*
  前年・前々年を入れる処理
