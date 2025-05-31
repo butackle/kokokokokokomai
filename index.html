@@ -19,15 +19,21 @@
     <p>古古古古言っている米が何年産の米なのか当てよう</p>
 
     <div id="gameInfo">
-        <div>
-            <h3>既定問題</h3>
-            <a href="./game.html">ゲーム開始（西暦モード）</a>
-            <a href="./game.html?year=wareki">ゲーム開始（和暦モード）</a>
+        <div class="form-block">
+            <label for="questions">問題を選択する</label>
+            <select id="questions">
+                <option value="1">問題１</option>
+                <option value="2">問題２</option>
+            </select>
+        </div>
+        <div class="form-block">
+            <input type="radio" name="mode" value="seireki" id="seireki" checked>
+            <label for="seireki">西暦モードで遊ぶ</label>
+            <input type="radio" name="mode" value="wareki" id="wareki">
+            <label for="wareki">和暦モードで遊ぶ</label>
         </div>
         <div>
-            <h3>ランダム問題</h3>
-            <a href="./game.html?mode=random">ゲーム開始（西暦モード）</a>
-            <a href="./game.html?mode=random&year=wareki">ゲーム開始（和暦モード）</a>
+            <a href="./game.html">ゲーム開始</a>
         </div>
     </div>
 

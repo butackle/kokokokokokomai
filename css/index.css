@@ -30,6 +30,40 @@
     transform: translateY(0); /* 押したときに戻る */
 }
 
+#gameInfo .form-block {
+    margin: 2px auto;
+    display: inline-block;
+    padding: 10px;
+    background-color: #fff7e5; /* 少し薄いクリームでフォームを際立たせる */
+    border: 2px solid #e0cda9; /* ベージュ系の枠線 */
+    border-radius: 12px;
+    text-align: center;
+    width: 50%;
+}
+
+#gameInfo .form-block label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #443b32;
+}
+
+#gameInfo .form-block select,
+#gameInfo .form-block input[type="radio"] {
+    margin: 6px 0;
+    accent-color: #a47847; /* ラジオボタンの色をブラウン調に */
+    margin-left: 10px;
+}
+
+#gameInfo .form-block select {
+    padding: 6px 12px;
+    border: 1px solid #a47847;
+    border-radius: 6px;
+    background-color: #fffef7;
+    color: #443b32;
+    font-size: 14px;
+    margin-left: 25px;
+}
+
 /* 古米の定義 */
 #definitionOpenBtn {
     background-color: #fdf0da;
