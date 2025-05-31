@@ -1,7 +1,10 @@
-// ゲームモード選択
+/**
+ * ゲームモード選択
+ */
 const selectQuestion = document.getElementById('questions');
 const radioMode = document.querySelectorAll('input[name="mode"]');
 const gameStartLink = document.getElementById('gameStartLink');
+// ゲームページへのリンクのparamを設定する
 const setGameLinkParams = (paramName, paramValue) => {
 	const linkHref = gameStartLink.getAttribute('href');
 	const gamePageURL = linkHref ? new URL(linkHref) : GAME_PAGE_URL;
@@ -9,18 +12,23 @@ const setGameLinkParams = (paramName, paramValue) => {
 	gamePageParams.set(paramName, paramValue);
 	gameStartLink.href = gamePageURL;
 }
+// ゲームページへのリンクに問題番号をセットする関数
 const setQuestion = () => {
 	const selectedValue = selectQuestion.value;
 	setGameLinkParams(QUESTION_PARAM, selectedValue);
 }
+// モード選択のラジオボタンが変更された時の処理
 radioMode.forEach((radio) =>
 	radio.addEventListener('change', () => {
 		radio.checked && setGameLinkParams(MODE_PARAM, radio.value);
 	})
 );
+// 問題を選択した際の処理
 selectQuestion.addEventListener('change', setQuestion);
+// ページ読み込み時の処理
 document.addEventListener('DOMContentLoaded', () => {
 	setQuestion();
+	// 和暦モードのラジオボタンの値を設定
 	const warekiRadioBtn = document.getElementById('wareki_radio');
 	if (warekiRadioBtn) {
 		warekiRadioBtn.value = WAREKI_MODE;
@@ -28,14 +36,18 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// 古米の定義ボタンを押された時の動作
+/*
+ 古米の定義ボタンを押された時の動作
+*/
 const defineDialog = document.getElementById('definitionDialog');
 const definitionOpenBtn = document.getElementById('definitionOpenBtn');
 const definitionCloseBtn = document.getElementById('definitionCloseBtn');
 definitionOpenBtn.addEventListener('click', () => defineDialog.showModal());
 definitionCloseBtn.addEventListener('click', () => defineDialog.close());
 
-// 前年・前々年を入れる処理
+/*
+ 前年・前々年を入れる処理
+*/
 document.querySelectorAll('.p1Year').forEach((element) => {
 	element.textContent = currentYear - 1
 });
