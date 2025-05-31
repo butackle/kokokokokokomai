@@ -4,6 +4,7 @@ const QUESTIONS_URL = new URL("questions/questions", location.href);
 const QUESTION_PARAM = "q";
 const MODE_PARAM = "m";
 const WAREKI_MODE = "wareki";
+const QUESTION_COUNT = 5;
 
 const currentYear = new Date().getFullYear();
 

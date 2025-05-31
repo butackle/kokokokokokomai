@@ -77,11 +77,14 @@ setDialogBtn('donationDialog', 'donationOpenBtn', 'donationCloseBtn');
 
 
 /*
- 前年・前々年を入れる処理
+ 前年・前々年・問題数を入れる処理
 */
 document.querySelectorAll('.p1Year').forEach((element) => {
 	element.textContent = currentYear - 1
 });
 document.querySelectorAll('.p2Year').forEach((element) => {
 	element.textContent = currentYear - 2
+});
+document.querySelectorAll('.questionCount').forEach((element) => {
+	element.textContent = QUESTION_COUNT
 });
