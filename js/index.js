@@ -40,21 +40,11 @@ window.addEventListener("pageshow", () => {
 /*
  古米の定義ボタンを押された時の動作
 */
-const defineDialog = document.getElementById('definitionDialog');
-const definitionOpenBtn = document.getElementById('definitionOpenBtn');
-const definitionCloseBtn = document.getElementById('definitionCloseBtn');
-definitionOpenBtn.addEventListener('click', () => defineDialog.showModal());
-definitionCloseBtn.addEventListener('click', () => defineDialog.close());
-
+setDialogBtn('definitionDialog', 'definitionOpenBtn', 'definitionCloseBtn');
 /*
 西暦・和暦の対応について
  */
-const warekiSeirekiDialog = document.getElementById('warekiSeirekiDialog');
-const warekiSeirekiOpenBtn = document.getElementById('warekiSeirekiOpenBtn');
-const warekiSeirekiCloseBtn = document.getElementById('warekiSeirekiCloseBtn');
-warekiSeirekiOpenBtn.addEventListener('click', () => warekiSeirekiDialog.showModal());
-warekiSeirekiCloseBtn.addEventListener('click', () => warekiSeirekiDialog.close());
-const warekiSeirekiTable = document.querySelector('#warekiSeirekiDialog table tbody');
+setDialogBtn('warekiSeirekiDialog', 'warekiSeirekiOpenBtn', 'warekiSeirekiCloseBtn');
 document.addEventListener('DOMContentLoaded', () => {
 	WAREKI_SEIREKI.forEach(({wareki, seireki}) => {
 		const row = document.createElement('tr');
@@ -72,11 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
 /*
 寄付のお願い
  */
-const donationDialog = document.getElementById('donationDialog');
-const donationOpenBtn = document.getElementById('donationOpenBtn');
-const donationCloseBtn = document.getElementById('donationCloseBtn');
-donationOpenBtn.addEventListener('click', () => donationDialog.showModal());
-donationCloseBtn.addEventListener('click', () => donationDialog.close());
+setDialogBtn('donationDialog', 'donationOpenBtn', 'donationCloseBtn');
 
 
 /*
