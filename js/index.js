@@ -38,7 +38,7 @@ window.addEventListener("pageshow", () => {
 
 
 /*
- 古米の定義ボタンを押された時の動作
+ 古米の定義
 */
 setDialogBtn('definitionDialog', 'definitionOpenBtn', 'definitionCloseBtn');
 /*
